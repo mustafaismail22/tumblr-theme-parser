@@ -89,7 +89,7 @@ compile = (text, data = {}) ->
       if not value? and searchParentScope?
         value = searchParentScope(type, tagName)
 
-      if type is '' and tagName in Object.keys(MIXINS)
+      if type is '' and typeof value is 'object' and tagName in Object.keys(MIXINS)
         # mixins are global and just look like interpolation
         return MIXINS[tagName].bind(this, value)
 
