@@ -1,4 +1,4 @@
-{compile, parse} = require '../lib'
+{compile, parse} = require '../src'
 should = require 'should'
 
 describe 'parser', ->
